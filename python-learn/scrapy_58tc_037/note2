@@ -1,0 +1,20 @@
+1. scrapy 项目结构
+    项目名字
+        项目名字
+            spiders文件(存储的是爬虫文件)
+                init
+                自定义的爬虫文件    核心功能文件
+            init
+            items   定义数据结构的地方(爬虫的数据都包含哪些)
+            middlewares 中间件  代理
+            pipelines   管道  用来处理下载的数据
+            settings    配置文件  robots协议 ua定义等
+
+2.response的属性和方法
+    response.text   获取的是字符串
+    response.body   获取的是二进制
+    response.xpath()  可以直接使用xpath方法来解析response中的内容, 解析完内容用变量接收后,可以使用extract()获取值
+        extract() 提取seletor对象的data属性值
+        extract_first() 提取seletor列表的第一个数据
+
+注意: 如果请求的接口是html为结尾, 不用在后面加 /

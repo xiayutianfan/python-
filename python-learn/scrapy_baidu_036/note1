@@ -1,0 +1,16 @@
+1. 创建爬虫项目   得要使用cmd命令   scrapy startproject 项目的名字
+                                项目名字不能使用数字开头,也不能有中文
+
+2. 创建爬虫文件
+        在spiders文件中去创建爬虫文件
+            scrapy_baidu_036/scrapy_baidu_036/spiders
+            创建爬虫文件
+            scrapy genspider 爬虫文件的名字 要爬取的网页
+            例如: scrapy genspider baidu www.baidu.com (一般不用加http)
+
+3. 运行爬虫代码
+        scrapy crawl 爬虫的名字(name = 'baidu')
+        例如:scrapy crawl baidu
+        注意: 在settings.py里面把ROBOTSTXT_OBEY这个协议注释掉
+
+注意: 如果请求的接口是html为结尾, 不用在后面加 /
